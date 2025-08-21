@@ -1,6 +1,6 @@
 public abstract class Robot {
 
-    /** TODO 1: Cut the of "modeOfOperation" property declaration from
+    /** TODO: Cut the of "modeOfOperation" property declaration from
      *          SideKick.java and paste it here.
      *          From now on we will use
      *          the term "move" for cut and paste from one class to
@@ -10,13 +10,13 @@ public abstract class Robot {
     /** mode of operation  **/
     private int modeOfOperation;
 
-    /** TODO 2: Move the declaration of "batteryCharge" to this class
+    /** TODO: Move the declaration of "batteryCharge" to this class
      *          from SideKick.java to here
      **/
     /** charge of battery  **/
     private int batteryCharge;
 
-    /** TODO 3: Create a default constructor and move the initialization
+    /** TODO: Create a default constructor and move the initialization
      *          of the property "modeOfOperation" and "batteryCharge"
      *          from the constructor of SideKick.java to here.
      **/
@@ -26,7 +26,7 @@ public abstract class Robot {
         this.batteryCharge = 0;
     }
 
-    /** TODO 4: Move the setters and getters for property
+    /** TODO: Move the setters and getters for property
      *          "modeOfOperation"
      *          from SideKick.java to here.
      **/
@@ -45,7 +45,7 @@ public abstract class Robot {
         }
     }
 
-    /** TODO 5: Move the setters and getters for property
+    /** TODO: Move the setters and getters for property
      *          "batterCharge"
      *          from SideKick.java to here.
      **/
@@ -59,7 +59,7 @@ public abstract class Robot {
         this.batteryCharge = batteryCharge;
     }
 
-    /** TODO 6: Move the method "rechargeBattery()" for
+    /** TODO: Move the method "rechargeBattery()" for
      *          recharging battery
      *          from SideKick.java to here.
      **/
@@ -74,7 +74,7 @@ public abstract class Robot {
         System.out.println("Fully charged.....");
     }
 
-    /** TODO 7: Move the method "displayBatteryLevel()"
+    /** TODO: Move the method "displayBatteryLevel()"
      *          for displaying battery
      *          charge level from SideKick.java to here.
      **/
@@ -82,12 +82,12 @@ public abstract class Robot {
         System.out.println("The battery charge is at :" + batteryCharge + " %.");
     }
 
-    /** TODO 8: Prevent objects of this class from being
+    /** TODO: Prevent objects of this class from being
      *          created by making
      *         this class abstract.
      **/
 
-    /** TODO 16: Declare two abstract methods
+    /** TODO: Declare two abstract methods
      *           "setChoice" and "takeAction"
      *           with the return type "void"
      **/

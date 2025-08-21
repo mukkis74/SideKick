@@ -1,39 +1,32 @@
 import java.util.Scanner;
 
-public class SideKick extends Robot {
+public class SideKick extends Robot implements KungFuSkills {
+
     Scanner keyboard;
 
-    /** TODO 9: Make this class a child class of
-     *          the Robot class by using
-     *          "extends Robot" after the
-     *          "class SideKick" above.
-     **/
+    /** default constructor **/
+    public SideKick() {
+        keyboard = new Scanner(System.in);
+    }
 
-    // method to set choice
+   // method to set choice
+    @Override
     public void setChoice() {
         System.out.println("***** SideKick Menu *****");
         System.out.println("1. Cleaning");
         System.out.println("2. Cooking");
         System.out.println("3. Re-charge");
+        System.out.println("4. Check battery level");
 
-        System.out.println("Enter choice(1-3):");
+        System.out.println("Enter choice(1-4):");
         int choice = keyboard.nextInt();
 
-        /** TODO 10: Replace the direct assignment of the
-         *           property "modeOfOperation"
-         *           to use the setter method
-         */
         setModeOfOperation(choice);
     }
 
     // method to take action
+    @Override
     public void takeAction() {
-        /** TODO 11: Replace the direct use of
-         *           the property "modeOfOperation"
-         *           in the switch to use the
-         *           getter method
-         */
-
         switch (getModeOfOperation()) {
             case 1:
                 cleanHouse();
@@ -47,10 +40,15 @@ public class SideKick extends Robot {
                 rechargeBattery();
                 System.out.println("SideKick recharged battery.");
                 break;
+            case 4:
+                System.out.println("SideKick Battery:");
+                displayBatteryLevel();
+                break;
             default:
                 System.out.println("SideKick does not support the operation.");
         }
     }
+
 
     // method to clean
     private void cleanHouse() {
@@ -77,4 +75,18 @@ public class SideKick extends Robot {
         System.out.println("Go back to Toni...........");
     }
 
+    /** TODO 5: Implement the interface "KungFuSkills"
+     *           created in TODO 5.
+     **/
+
+    /** TODO 6: Give the functionality inside the the methods
+     *           of the interface "KungFuSkills" which is
+     *           inside the method "kungFuProtection"
+     **/
+    @Override
+    public void kungFuProtection() {
+        System.out.println("Find a Taolu...");
+        System.out.println("Execute the movements....");
+        System.out.println("Get in a defensive position...");
+    }
 }
